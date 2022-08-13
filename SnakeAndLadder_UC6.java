@@ -2,13 +2,15 @@ package snakesAndLadder;
 
 import java.util.Random;
 
-public class SnakeAndLadder_UC5 {
-	static void exactWin() {
+public class SnakeAndLadder_UC6 {
+	static void numberOfMoves() {
         int winningPosition = 100;
         int playerPosition = 0;
+        int moves = 0;
         Random random = new Random();
 
         while (playerPosition != winningPosition) {
+            moves++;
 
             int rollTheDice = random.nextInt(6)+1;
             System.out.println("After rolling the dice : "+rollTheDice);
@@ -34,8 +36,9 @@ public class SnakeAndLadder_UC5 {
                 System.out.println("Snake : "+playerPosition);
             }
         }
+        System.out.println("Number Of Total Moves : "+moves);
     }
-	public static void main(String[] args) {
-		exactWin();
-	}
+    public static void main(String[] args) {
+        numberOfMoves();
+    }
 }
